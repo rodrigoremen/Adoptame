@@ -1,0 +1,16 @@
+tinymce.init({ //archivo de configuracion del editor, se pueden añadir o quitar varios plugins asi como letras o colores
+    selector: 'textarea#tiny',
+    plugins: 'preview importcss searchreplace autolink  directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
+    editimage_cors_hosts: ['picsum.photos'],
+    toolbar: ' bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen | insertfile image media template link anchor codesample | ltr rtl',
+    toolbar_sticky: false,
+    image_advtab: true,
+    height: 600,
+    resize: 'both',
+    image_caption: true,
+    quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+    noneditable_class: 'mceNonEditable',
+    toolbar_mode: 'sliding',
+    contextmenu: 'link image table',
+    newline_behavior: 'linebreak',
+});
