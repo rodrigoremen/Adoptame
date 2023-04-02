@@ -1,0 +1,10 @@
+package com.example.adoptame.application.entities.pet.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class PetController {
+    @Autowired
+    private PetService petService;
+}

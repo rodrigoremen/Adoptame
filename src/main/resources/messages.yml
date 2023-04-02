@@ -1,0 +1,203 @@
+Action:
+  NotNull:
+    name: El nombre no debe estar vacío
+    icon: El icono no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    icon: El icono no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 50 caracteres
+    icon: El icono debe contener entre 2 y 50 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+
+Address:
+  NotNull:
+    street: La calle no debe estar vacía
+    externalNumber: El número externo no debe estar vacío
+    zipCode: El código postal no debe estar vacío
+  NotBlank:
+    street: La calle no debe estar en blanco
+    externalNumber: El número externo no debe estar en blanco
+    zipCode: El código postal no debe estar en blanco
+  Size:
+    street: La calle debe contener entre 2 y 50 caracteres
+    externalNumber: El número externo debe contener entre 1 y 5 dígitos
+    zipCode: El código postal debe contener entre 1 y 5 dígitos
+    internalNumber: El número interno debe contener entre 1 y 5 dígitos
+  Pattern:
+    street: La calle no debe tener caracteres especiales
+    externalNumber: El número externo solo debe tener dígitos
+    zipCode: El código postal solo debe tener dígitos
+    references: La referencia no debe tener caracteres especiales
+
+Board:
+  NotNull:
+    name: El nombre no debe estar vacío
+    icon: El icono no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    icon: El icono no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 50 caracteres
+    icon: El icono debe contener entre 2 y 50 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+Character:
+  NotNull:
+    name: El nombre no debe estar vacío
+    icon: El icono no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    icon: El icono no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 50 caracteres
+    icon: El icono debe contener entre 2 y 150 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    description: La descripción no debe tener caracteres especiales
+
+Color:
+  NotNull:
+    name: El nombre no debe estar vacío
+    hexCode: El código hexadecimal del color no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    hexCode: El código hexadecimal del color no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 50 caracteres
+    hexCode: El código hexadecimal del color debe contener entre 2 y 10 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    hexCode: El código hexadecimal del color no debe tener caracteres válidos
+
+Donation:
+  NotNull:
+    quantity: La cantidad no debe estar vacía
+  DecimalMin:
+    quantity: La cantidad debe ser mayor a $0
+  DecimalMax:
+    quantity: La cantidad debe ser menor a $100,000
+  Size:
+    authorization: La autorización debe tener al menos 2 caracteres
+
+News:
+  NotNull:
+    title: El título no debe estar vacío
+    content: El contenido no debe estar vacío
+    image: La imagen no debe estar vacía
+  NotBlank:
+    title: El título no debe estar en blanco
+    content: El contenido no debe estar en blanco
+    image: La imagen no debe estar en blanco
+  Size:
+    title: El título debe contener entre 2 y 50 caracteres
+    content: El contenido debe contener al menos 10 caracteres
+    image: La imagen debe contener entre 2 y 50 caracteres
+  Pattern:
+    title: El título no debe tener caracteres especiales
+    content: El contenido no debe tener caracteres especiales
+
+Pet:
+  NotNull:
+    name: El nombre no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 30 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+  Min:
+    age: La edad (años) debe tener como mínimo 0 años
+    month: La edad (meses) debe tener como mínimo 0 meses
+  Max:
+    age: La edad (años) debe tener como máximo 99 años
+    month: La edad (meses) debe tener como máximo 99 meses
+
+Profile:
+  NotNull:
+    name: El nombre no debe estar vacío
+    lastName: El primer apellido no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    lastName: El primer apellido no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 30 caracteres
+    lastName: El primer apellido debe contener entre 2 y 30 caracteres
+    secondName: El segundo apellido debe contener entre 2 y 30 caracteres
+    phone: El teléfono debe contener 10 dígitos
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    lastName: El primer apellido no debe tener caracteres especiales
+    secondName: El segundo apellido no debe tener caracteres especiales
+    phone: El teléfono debe tener solo dígitos
+
+Request:
+  NotNull:
+    reason: La razón no debe estar vacía
+  NotBlank:
+    reason: La razón no debe estar vacía
+  Size:
+    reason: La razón debe contener entre 10 y 140 caracteres
+  Pattern:
+    reason: La razón no debe tener caracteres especiales
+
+Role:
+  NotNull:
+    authority: El tipo no debe estar vacío
+  NotBlank:
+    authority: El tipo no debe estar en blanco
+  Size:
+    authority: El tipo debe contener entre 2 y 10 caracteres
+    description: La descripción debe contener entre 2 y 50 caracteres
+  Pattern:
+    authority: El tipo no debe tener caracteres especiales
+    description: La descripción no debe tener caracteres especiales
+
+Size:
+  NotNull:
+    name: El nombre no debe estar vacío
+    range: El rango no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+    range: El rango no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 30 caracteres
+    range: El rango debe contener entre 2 y 30 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    range: El rango no debe tener caracteres especiales
+
+Tag:
+  NotNull:
+    name: El nombre no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 20 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    description: La descripción no debe tener caracteres especiales
+Type:
+  NotNull:
+    name: El nombre no debe estar vacío
+  NotBlank:
+    name: El nombre no debe estar en blanco
+  Size:
+    name: El nombre debe contener entre 2 y 20 caracteres
+  Pattern:
+    name: El nombre no debe tener caracteres especiales
+    description: La descripción no debe tener caracteres especiales
+
+User:
+  NotNull:
+    username: El correo electrónico no debe estar vacío
+    password: La contraseña no debe estar vacía
+  NotBlank:
+    username: El correo electrónico no debe estar en blanco
+    password: La contraseña no debe estar en blanco
+  Size:
+    username: El correo electrónico debe contener entre 5 y 50 caracteres
+    password: La contraseña debe contener entre 5 y 30 caracteres
+  Email:
+    username: El correo electrónico debe ser válido

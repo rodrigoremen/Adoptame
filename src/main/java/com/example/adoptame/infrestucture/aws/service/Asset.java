@@ -1,4 +1,4 @@
-package com.example.adoptame.infrestucture.aws.model;
+package com.example.adoptame.infrestucture.aws.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
