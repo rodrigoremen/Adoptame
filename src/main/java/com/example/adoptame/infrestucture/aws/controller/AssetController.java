@@ -1,6 +1,6 @@
 package com.example.adoptame.infrestucture.aws.controller;
 
-import com.example.adoptame.infrestucture.aws.model.Asset;
+import com.example.adoptame.infrestucture.aws.service.Asset;
 import com.example.adoptame.infrestucture.aws.service.S3Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;

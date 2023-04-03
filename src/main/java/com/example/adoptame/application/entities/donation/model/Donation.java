@@ -1,6 +1,6 @@
-package com.example.adoptame.application.entities.color;
+package com.example.adoptame.application.entities.donation.model;
 
-import com.example.adoptame.application.entities.user.User;
+import com.example.adoptame.application.entities.user.model.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,13 +17,14 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
-public class Donnation implements Serializable {
+public class Donation implements Serializable {
+
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_donation")
     private Integer id;
 
     @NotNull
@@ -35,12 +36,13 @@ public class Donnation implements Serializable {
     @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")
     @Column(columnDefinition = "varchar(50)")
     private String status;
-    @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")
-    @Column(columnDefinition = "varchar(150)")
-    private String authorization;
 
     @Column(columnDefinition = "varchar(150)")
     private boolean isSucces;
+
+    @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")
+    @Column(columnDefinition = "varchar(150)")
+    private String authorization;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", updatable = false)
@@ -51,7 +53,7 @@ public class Donnation implements Serializable {
     private LocalDateTime updatedAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id",nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
 

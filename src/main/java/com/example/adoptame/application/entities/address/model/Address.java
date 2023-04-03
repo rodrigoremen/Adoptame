@@ -1,6 +1,6 @@
-package com.example.adoptame.application.entities.address;
+package com.example.adoptame.application.entities.address.model;
 
-import com.example.adoptame.application.entities.person.Person;
+import com.example.adoptame.application.entities.person.model.Person;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -21,8 +21,8 @@ public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Integer id;
+    @Column(name = "id_address")
+    private long id;
 
     @NotNull
     @NotBlank
@@ -71,3 +71,4 @@ public class Address implements Serializable {
     @OneToOne(mappedBy = "address")
     private Person person;
 }
+

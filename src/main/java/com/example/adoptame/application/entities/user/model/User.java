@@ -1,8 +1,9 @@
-package com.example.adoptame.application.entities.user;
+package com.example.adoptame.application.entities.user.model;
 
-import com.example.adoptame.application.entities.color.Donnation;
-import com.example.adoptame.application.entities.person.Person;
-import com.example.adoptame.application.entities.role.Role;
+import com.example.adoptame.application.entities.donation.model.Donation;
+import com.example.adoptame.application.entities.person.model.Person;
+import com.example.adoptame.application.entities.pet.model.Pet;
+import com.example.adoptame.application.entities.role.model.Role;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -30,7 +31,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
-    private Integer id;
+    private long id;
 
     @NotNull
     @NotBlank
@@ -46,9 +47,8 @@ public class User implements Serializable {
     private String password;
 
     @Column(nullable = false, columnDefinition = "tinyint default 1")
-    private Boolean active;
+    private Boolean isActive;
 
-    @Column
     @OneToOne(mappedBy = "user")
     private Person person;
 
@@ -66,13 +66,23 @@ public class User implements Serializable {
 
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
-    private List<Donnation> donnationList;
+    private List<Donation> donations;
+
+
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "Favorite_pets",
+            joinColumns = @JoinColumn(name = "id_pet"),
+            inverseJoinColumns = @JoinColumn(name="id_user"))
+    private List<Pet>favoritePets;
 
     public void addRoles() {
         roles = new HashSet<>();
     }
 
-    public void setRoles() {
+    public void setRoles(Set<Role>roles) {
         this.roles = roles;
     }
 

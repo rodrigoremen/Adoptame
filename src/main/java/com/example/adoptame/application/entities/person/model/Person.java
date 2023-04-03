@@ -1,7 +1,7 @@
-package com.example.adoptame.application.entities.person;
+package com.example.adoptame.application.entities.person.model;
 
-import com.example.adoptame.application.entities.address.Address;
-import com.example.adoptame.application.entities.user.User;
+import com.example.adoptame.application.entities.address.model.Address;
+import com.example.adoptame.application.entities.user.model.User;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
@@ -22,7 +22,7 @@ public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_person")
     private Integer id;
     @NotNull
     @NotBlank
@@ -40,7 +40,6 @@ public class Person implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "address_id")
-    @Column(nullable = false, columnDefinition = "varchar(100)")
     private Address address;
 
     @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")

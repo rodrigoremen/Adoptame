@@ -1,4 +1,4 @@
-package com.example.adoptame.application.entities.role;
+package com.example.adoptame.application.entities.role.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -21,7 +21,7 @@ public class Role implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_role")
     private Integer id;
 
     @NotNull
