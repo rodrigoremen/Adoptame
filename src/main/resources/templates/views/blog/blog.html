@@ -1,12 +1,146 @@
-<!doctype html>
-<html lang="en"
+<!DOCTYPE html>
+<html lang="es"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head
-        th:replace="components/HTML::htmlHead">
-</head>
-<body id="blog-main" class="d-flex flex-column min-vh-100">
-<header th:replace="components/"
+<head th:replace="components/htmlComponents::htmlHead"/>
+<body id="blog-main">
+<header aria-label="Page Header" class="bg-gray-50">
+    <div class="mx-auto max-w-screen-xl px-2 py-8 sm:px-6 lg:px-8">
 
+        <div class="mt-8">
+            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                Encuentra tu compañero ideal: ¡Adopta una mascota hoy!
+            </h1>
+
+            <p class="mt-1.5 text-sm text-gray-500">
+                Bienvenido a nuestro blog dedicado a la adopción de mascotas, donde te brindamos información valiosa y
+                compartimos emotivas historias de éxito.
+            </p>
+        </div>
+    </div>
+</header>
+<header th:replace="components/navbars::navbar-all-aux"></header>
+<main>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 ">
+
+        <article class="flex bg-white transition hover:shadow-xl">
+            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                <time datetime="2022-10-10"
+                      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
+                    <span>2023</span>
+                    <span class="w-px flex-1 bg-gray-900/10"></span>
+                    <span>Abr 12</span>
+                </time>
+            </div>
+
+            <div class="hidden sm:block sm:basis-56">
+                <img alt="Guitar"
+                     src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                     class="aspect-square h-full w-full object-cover"/>
+            </div>
+
+            <div class="flex flex-1 flex-col justify-between">
+                <div class="border-l border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+                    <a href="#">
+                        <h3 class="font-bold uppercase text-gray-900">
+                            Perros y gatos: ¿cuál es la mascota perfecta para ti?
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3">
+                        Descubre las diferencias entre perros y gatos, y
+                        averigua cuál se adapta mejor a tu estilo de vida
+                        antes de adoptar a tu nuevo compañero peludo.
+                    </p>
+                </div>
+
+                <div class="sm:flex sm:items-end sm:justify-end ">
+                    <a href="#"
+                       class="block bg-green-500 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400">
+                        Leer más
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="flex bg-white transition hover:shadow-xl">
+            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                <time datetime="2022-10-10"
+                      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
+                    <span>2023</span>
+                    <span class="w-px flex-1 bg-gray-900/10"></span>
+                    <span>Oct 10</span>
+                </time>
+            </div>
+
+            <div class="hidden sm:block sm:basis-56">
+                <img alt="Guitar"
+                     src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                     class="aspect-square h-full w-full object-cover"/>
+            </div>
+
+            <div class="flex flex-1 flex-col justify-between">
+                <div class="border-l border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+                    <a href="#">
+                        <h3 class="font-bold uppercase text-gray-900">
+                            El proceso de adopción: pasos a seguir
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3">
+                        Aprende sobre el proceso de adopción de mascotas,
+                        desde la búsqueda hasta la integración en tu hogar,
+                        para asegurar una transición exitosa y feliz.
+                    </p>
+                </div>
+
+                <div class="sm:flex sm:items-end sm:justify-end">
+                    <a href="#"
+                       class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400">
+                        Leer más
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="flex bg-white transition hover:shadow-xl">
+            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                <time datetime="2022-10-10"
+                      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
+                    <span>2023</span>
+                    <span class="w-px flex-1 bg-gray-900/10"></span>
+                    <span>Mar 10</span>
+                </time>
+            </div>
+
+            <div class="hidden sm:block sm:basis-56">
+                <img alt="Guitar"
+                     src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                     class="aspect-square h-full w-full object-cover"/>
+            </div>
+
+            <div class="flex flex-1 flex-col justify-between">
+                <div class="border-l border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+                    <a href="#">
+                        <h3 class="font-bold uppercase text-gray-900">
+                            5 razones para adoptar en lugar de comprar
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3">
+                        Conoce las ventajas de adoptar una mascota y cómo esta acción
+                        puede marcar una diferencia en la vida de los animales necesitados.
+                    </p>
+                </div>
+
+                <div class="sm:flex sm:items-end sm:justify-end">
+                    <a href="#"
+                       class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400">
+                        Leer más
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+<footer th:replace="components/htmlComponents::htmlFooter"/>
 </body>
 </html>
