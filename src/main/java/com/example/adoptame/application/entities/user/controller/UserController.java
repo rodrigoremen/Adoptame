@@ -17,4 +17,14 @@ public class UserController {
     private static final String SMSSUCCESS = "msg_success";
 
 
+    @GetMapping()
+    @Secured("ROLE_ADMIN")
+    public String type(Model model){
+        model.addAttribute("list",);
+        return "views/user/userList";
+    }
+
+
+
+
 }

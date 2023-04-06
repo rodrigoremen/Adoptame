@@ -24,8 +24,9 @@ import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
+@Data
 @NoArgsConstructor
-@Builder
+@Builder(toBuilder = true)
 @Entity
 @Table(name = "users")
 public class User implements Serializable {

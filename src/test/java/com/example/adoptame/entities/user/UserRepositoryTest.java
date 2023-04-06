@@ -1,8 +1,6 @@
 package com.example.adoptame.entities.user;
 
-import com.example.adoptame.application.entities.address.model.Address;
 import com.example.adoptame.application.entities.address.model.AddressRepository;
-import com.example.adoptame.application.entities.person.model.Person;
 import com.example.adoptame.application.entities.person.model.PersonRepository;
 import com.example.adoptame.application.entities.role.model.Role;
 import com.example.adoptame.application.entities.role.model.RoleRepository;
@@ -84,7 +82,7 @@ public class UserRepositoryTest {
         Assertions.assertThat(optionalUser).isPresent();
         Assertions.assertThat(optionalUser.get().getUsername()).isEqualTo("user1@example.com");
         Assertions.assertThat(optionalUser.get().getPassword()).isEqualTo("password1");
-        Assertions.assertThat(optionalUser.get().isActive()).isTrue();
+        Assertions.assertThat(optionalUser.get().getIsActive()).isTrue();
     }
 
     @DisplayName("Test para buscar un usuario inactivo por nombre de usuario")
@@ -101,7 +99,7 @@ public class UserRepositoryTest {
         Assertions.assertThat(optionalUser).isPresent();
         Assertions.assertThat(optionalUser.get().getUsername()).isEqualTo("user1@example.com");
         Assertions.assertThat(optionalUser.get().getPassword()).isEqualTo("password1");
-        Assertions.assertThat(optionalUser.get().isActive()).isTrue();
+        Assertions.assertThat(optionalUser.get().getIsActive()).isTrue();
     }
 
     @DisplayName("Test para buscar un usuario que no existe por nombre de usuario")
