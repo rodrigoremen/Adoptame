@@ -11,5 +11,6 @@ import java.util.Optional;
 public interface PersonRepository extends EntityRepository<Person,Long> {
     Optional<Person> findByUser(User user);
     Optional<Person> findByAddress(Address address);
-    List<Person> findAllByUser_Enabled(Boolean enabled);
+    List<Person> findAllByUser_IsActive (Boolean enabled);
+    List<Person>findAll();
 }

@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 @Entity
-@Table
+@Table(name = "colors")
 @Data
 @NoArgsConstructor
 public class Color implements Serializable {

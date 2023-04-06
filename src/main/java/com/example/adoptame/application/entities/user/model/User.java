@@ -10,6 +10,8 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -21,10 +23,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Entity
-@Table(name = "Users")
-@Data
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@Entity
+@Table(name = "users")
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -75,14 +78,14 @@ public class User implements Serializable {
     })
     @JoinTable(name = "Favorite_pets",
             joinColumns = @JoinColumn(name = "id_pet"),
-            inverseJoinColumns = @JoinColumn(name="id_user"))
-    private List<Pet>favoritePets;
+            inverseJoinColumns = @JoinColumn(name = "id_user"))
+    private List<Pet> favoritePets;
 
     public void addRoles() {
         roles = new HashSet<>();
     }
 
-    public void setRoles(Set<Role>roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 

@@ -7,6 +7,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TagService {
-    @Autowired
-    private EntityRepository<Tag,Long> tagRepository;
+
 }

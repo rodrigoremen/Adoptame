@@ -18,8 +18,9 @@ public interface PetRepository extends EntityRepository<Pet,Long> {
             nativeQuery = true)
     List<Pet> findPetsForAdopted();
     List<Pet>findAllByIsActiveAndIsDroppedFalseOrderByCreatedAtDesc(Boolean isActive);
-    List<Pet> findTop5ByCreatedAtDesc();
+    List<Pet> findTop5ByOrderByCreatedAtDesc();
 
+//
     Integer countByIsActiveAndIsDroppedFalse(Boolean isActive);
 
     Integer countByIsAdoptedAndIsDroppedFalse(Boolean isAdopted);

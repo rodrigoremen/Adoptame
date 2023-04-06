@@ -1,5 +1,6 @@
 package com.example.adoptame.application.entities.blog.model;
 
+import com.example.adoptame.application.entities.tag.model.Tag;
 import com.example.adoptame.application.entities.user.model.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -13,8 +14,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
+@Table(name = "blogs")
 @Data
 @NoArgsConstructor
 public class Blog implements Serializable {
@@ -54,4 +57,12 @@ public class Blog implements Serializable {
     @ManyToOne()
     @JoinColumn(name = "user_id")
     private User user;
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "tags_blogs",
+            joinColumns = @JoinColumn(name = "id_tag"),
+            inverseJoinColumns = @JoinColumn(name="id_blog"))
+    private List<Tag>tags;
 }

@@ -1,6 +1,7 @@
 package com.example.adoptame.application.entities.pet.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.io.Serializable;
@@ -8,7 +9,9 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
+@Table(name = "petsImages")
 public class PetImage implements Serializable {
     private static final long serialVersionUID =1L;
     @Id

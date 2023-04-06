@@ -20,7 +20,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "CHARACTER_TABLE")
+@Table(name = "characters")
 public class Character implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

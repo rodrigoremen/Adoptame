@@ -6,7 +6,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
@@ -37,3 +37,7 @@ logging:
           InstanceMetadataServiceResourceFetcher: error
         util:
           EC2MetadataUtils: error
+twilio:
+  account_sid: ACa4b51d21611b62d4b3ac669c6428c477
+  auth_token: 76d3d45b8ab877e60a0e773feed302d8
+  phone_number: +15855752855

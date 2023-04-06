@@ -1,19 +1,11 @@
 package com.example.adoptame.application.entities.log.controller;
 
-import com.example.adoptame.application.entities.log.model.LogRepository;
-import com.example.adoptame.application.entities.pet.model.Pet;
-import com.example.adoptame.application.entities.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class LogService {
-    @Autowired
-    private LogRepository logRepository;
+
 //    @Transactional(readOnly = true)
 //    public List<Log> findAll() {
 //        return logRepository.findAllByOrderByCreatedAtDesc();

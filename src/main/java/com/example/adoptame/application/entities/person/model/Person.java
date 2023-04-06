@@ -7,6 +7,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -16,8 +18,11 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "persons")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -42,11 +47,11 @@ public class Person implements Serializable {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")
+    @Pattern(regexp = "^[0-9-]+$")
     @Column(nullable = false, columnDefinition = "varchar(50)")
     private String telephone;
 
-    @Pattern(regexp = "[A-Za-zÀ-ÿ '-.]*")
+    @Pattern(regexp = "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$")
     @Column(nullable = true, columnDefinition = "varchar(255)")
     private String imageProfileUrl;
 

@@ -2,11 +2,15 @@ package com.example.adoptame.application.entities.log.model;
 
 import com.example.adoptame.application.entities.user.model.User;
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-
+@Entity
+@Table(name = "LOGS")
+@NoArgsConstructor
 public class Log implements Serializable {
     private static final long serialVersionUID =1L;
 

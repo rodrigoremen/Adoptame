@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
-@Table
+@Table(name = "petsadopted")
 @Data
 @NoArgsConstructor
 public class PetAdopted implements Serializable {
