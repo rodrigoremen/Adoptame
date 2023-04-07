@@ -1,14 +1,15 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:33060/adoptame
+    url: jdbc:mysql://localhost:3306/adoptame
     username: root
-    password: 995410
+    password: root
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
+        interceptor: com.example.adoptame.application.entities.auditLog.AuditLogInterceptor
         dialect: org.hibernate.dialect.MySQL8Dialect
         jdbc:
           time_zone: America/Mexico_City

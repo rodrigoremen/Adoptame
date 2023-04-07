@@ -1,10 +1,16 @@
 package com.example.adoptame.application.entities.auditLog;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "login_log")
 public class AuditLog {
     @Id
@@ -17,30 +23,5 @@ public class AuditLog {
     @Column(name = "date")
     private LocalDateTime date;
 
-    public AuditLog() {
-    }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
 }
